@@ -29,3 +29,4 @@ This module introduces basic Dart syntax and variable usage.
 ## Practice
 
 Try uncommenting the code blocks in `class1.dart` and running the file again to see how each example works.
+Try uncommenting the code blocks in `class1.dart` and running the file again to see how each example works.
