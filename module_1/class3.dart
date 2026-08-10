@@ -60,9 +60,9 @@ void main() {
   // var userData = userInfo(name: "nayeem", email: "nayeem@gmail.com", age: 22);
 
   // * array in dart
-  List<int> numbers = [10, 34, 54];
-  List<String> names = ["nayeem ", "rakib", "sakib"];
-  List mixedVlaues = [123, 34, "nayeem "];
+  // List<int> numbers = [10, 34, 54];
+  // List<String> names = ["nayeem ", "rakib", "sakib"];
+  // List mixedVlaues = [123, 34, "nayeem "];
 
   // print(numbers);
   // print(names);
@@ -86,7 +86,76 @@ void main() {
   //     return number * 2;
   //   }).toList();
   //   print(doubleNumber);
+
+  // * where / filter
+  //   List<int> rolls = [1, 2, 3, 4, 5, 6, 7];
+  //   // print(rolls);
+  //   List<int> topThreeRolls = rolls.where((num) => num <= 3).toList();
+  //   print(topThreeRolls);
+
+  // * find/ firstWhere
+  // var users = [
+  //   {"id": 1, "name": "nayeem"},
+  //   {"id": 2, "name": "nayeem"},
+  //   {"id": 3, "name": "nayeem"},
+  // ];
+
+  // // * find id = 1
+  // var user = users.where(
+  //   (user) => user["name"] == "nayeem",
+  // ); // where return match value
+  // var findUser = users.firstWhere(
+  //   (user) => user["name"] == "nayeem",
+  // ); // firstWhere return match first value
+  // // print(user);
+  // print(findUser);
+
+  // * any method
+  // List<int> numbers = [1, 2, 3, 4, 5];
+
+  // bool result = numbers.any((number) => number > 0);
+
+  // * reduce method in dart
+  // int total = numbers.reduce((sum, num) => sum + num);
+
+  // print(total);
+
+  // * Dart fold()
+  // int sumOfTotalNumbers = numbers.fold(0, (sum, num) => sum + num);
+  // print(sumOfTotalNumbers);
+
+  // * object
+  // Map<String, dynamic> user = {
+  //   "name": "nayeem",
+  //   "email": "nayeem@gmail.com",
+  //   "roll": 12,
+  //   "isStudent": true,
+  // };
+
+  // print(user["name"]);
+  // print(user["email"]);
+  // print(
+  //   "name is ${user['name']}.\n email is ${user['email']}.\n roll is ${user['roll']}",
+  // );
+
+  Map<String, int> marks = {"math": 60, "physics": 70, "chemistry": 89};
+
+  // print("math mark is ${marks["math"]} \n physics mark is ${marks["physics"]}");
+
+  // add or update in map
+  // marks["math"] = 89;
+  // print(marks["math"]);
+  // marks.remove("math");
+  // print(marks);
+
+  // mark iteration
+  marks.forEach((key, value) {
+    print("$key = $value");
+  });
 }
+
+// -------------------------------------------------------
+
 //  * passing parameter in a function
 // String UserName(String firstName, String LastName) {
 //   String fullName = "full name is $firstName + $LastName";
