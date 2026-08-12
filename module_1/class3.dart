@@ -138,7 +138,7 @@ void main() {
   //   "name is ${user['name']}.\n email is ${user['email']}.\n roll is ${user['roll']}",
   // );
 
-  Map<String, int> marks = {"math": 60, "physics": 70, "chemistry": 89};
+  // Map<String, int> marks = {"math": 60, "physics": 70, "chemistry": 89};
 
   // print("math mark is ${marks["math"]} \n physics mark is ${marks["physics"]}");
 
@@ -149,9 +149,104 @@ void main() {
   // print(marks);
 
   // mark iteration
-  marks.forEach((key, value) {
-    print("$key = $value");
-  });
+  // marks.forEach((key, value) {
+  //   print("$key = $value");
+  // });
+
+  // * set method
+  // List<int> numbers = [1, 2, 4, 5, 6, 3, 2, 1];
+  // print(numbers);
+  // List<int> duplicateNumberIgnore = numbers.toSet().toList();
+  // print(duplicateNumberIgnore);
+
+  // * list map set map example
+  // List<String> fruits = ["apple", "banana", "mango", "apple"];
+  // Set<String> fruits = {"apple", "banana", "mango", "apple"};
+  // Map<String, dynamic> users = {
+  //   "name": "nayeem",
+  //   "email": "nayeem@gmail.com",
+  //   "roll": 12089,
+  // };
+  // print(users);
+
+  // * problem 1:
+  // List<Map<String, dynamic>> users = [
+  //   {"name": "Nayeem", "age": 22, "active": true},
+  //   {"name": "Rahim", "age": 25, "active": false},
+  //   {"name": "Karim", "age": 20, "active": true},
+  // ];
+
+  // todo get active users
+  // List<Map<String, dynamic>> activeUsers = users
+  //     .where((user) => user["active"] == true)
+  //     .toList();
+
+  // print("active user $activeUsers");
+
+  // List<String> names = users
+  //     .where((user) => user['active'] == true)
+  //     .map((user) => user['name'] as String)
+  //     .toList();
+
+  // print(names);
+  /**
+* todo  সব product-এর নাম বের করো
+* todo  শুধু Electronics বের করো
+* todo  যেসব product-এর price 5000 এর বেশি সেগুলো বের করো
+* todo সব product-এর total price বের করো
+* todo শুধু unique category বের করো → Set ব্যবহার করে
+* todo সবচেয়ে expensive product বের করো
+* todo প্রতিটা product-এর price 10% বাড়িয়ে নতুন List বানাও
+ */
+  List<Map<String, dynamic>> products = [
+    {"name": "Laptop", "price": 80000, "category": "Electronics"},
+    {"name": "Phone", "price": 30000, "category": "Electronics"},
+    {"name": "Shirt", "price": 1500, "category": "Fashion"},
+    {"name": "Shoes", "price": 3000, "category": "Fashion"},
+  ];
+
+  // List<String> productName = products
+  //     .map((product) => product['name'] as String)
+  //     .toList();
+
+  // print(productName);
+
+  // List<Map<String, dynamic>> electronicsCategoryProduct = products
+  //     .where((product) => product["category"] == "Electronics")
+  //     .map((product) => product)
+  //     .toList();
+
+  // print(electronicsCategoryProduct);
+
+  // List<Map<String, dynamic>> priceUp5000 = products
+  //     .where((product) => product["price"] >= 5000)
+  //     .toList();
+
+  // print(priceUp5000);
+
+  // int totalPrice = products
+  //     .map((product) => product["price"])
+  //     .reduce((price, sum) => price + sum);
+
+  // print(totalPrice);
+
+  // Set<String> uniqueCategory = products
+  //     .map((product) => product["category"] as String)
+  //     .toSet();
+
+  // print(uniqueCategory);
+
+  // Map<String, dynamic> expenceProduct = products.reduce(
+  //   (product1, product2) =>
+  //       product1["price"] > product2["price"] ? product1 : product2,
+  // );
+  // print(expenceProduct);
+
+  // List<Map<String, dynamic>> priceUpdate10 = products.map((product) {
+  //   return {...product, "price": ((product["price"] as int) * 1.10).round()};
+  // }).toList();
+
+  // print(priceUpdate10);
 }
 
 // -------------------------------------------------------
